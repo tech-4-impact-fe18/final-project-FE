@@ -1,5 +1,6 @@
-import LandingPage from "./pages/Landing/LandingPage"
 import "./App.css"
+import LandingPage from "./pages/Landing/LandingPage"
+
 
 
 
