@@ -11,7 +11,7 @@ const LandingPage = () => {
       <br />
       <div className="mb-20">
         <div className="flex justify-center ">
-          <div className="rounded-lg shadow-lg bg-white max-w-md shadow-md transition duration-150 ease-in">
+          <div className="rounded-lg shadow-lg bg-white max-w-md shadow-md transition duration-150 ease-in text-center">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
               <img
                 src={logo}

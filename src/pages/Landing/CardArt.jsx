@@ -11,7 +11,7 @@ const CardArt = () => {
         {
             title: "Mengenal Pentingnya Kesehatan Mental pada Remaja",
             url: "https://yankes.kemkes.go.id/view_artikel/362/mengenal-pentingnya-kesehatan-mental-pada-remaja",
-            content: "Kesehatan mental dipengaruhi oleh peristiwa dalam kehidupan yang meninggalkan dampak yang besar pada kepribadian dan perilaku seseorang.dapat berupa kekerasan dalam rumah tangga, pelecehan anak, atau stres berat"
+            content: "Kesehatan mental dipengaruhi oleh peristiwa dalam kehidupan yang meninggalkan dampak yang besar pada kepribadian dan perilaku seseorang.dapat berupa kekerasan dalam rumah tangga, pelecehan anak, atau stres berat."
         },
         {
             title: "Darurat Kesehatan Mental bagi Remaja",
@@ -26,7 +26,7 @@ const CardArt = () => {
         {
             title: "Perhatikan Kesehatan Mental Remaja Saat Pandemi COVID-19",
             url: "https://indonesiabaik.id/infografis/perhatikan-kesehatan-mental-remaja-saat-pandemi-covid-19",
-            content: "Para remaja menghadapi situasi baru ini bukan tidak hanya dengan kecewa, namun juga kecemasan dan perasaan terisolasi yang membebani, terhadap perubahan hidup akibat wabah yang secara cepat. ."
+            content: "Para remaja menghadapi situasi baru ini bukan tidak hanya dengan kecewa, namun juga kecemasan dan perasaan terisolasi yang membebani, terhadap perubahan hidup akibat wabah yang secara cepat."
         },
         {
             title: "Survei : Satu dari Tiga Remaja Indonesia Memilliki Masalah Kesehatan Mental",
@@ -55,11 +55,8 @@ const CardArt = () => {
                                 {items.title}
                               </h3> <br />
                               <p className="mb-2 leading-normal">
-                                {items.content}
+                                {items.content} <a href={items.url} className="inline-block text-blue font-medium text-md hover:uppercase transition duration-150 ease-in-out">Read more...</a>
                               </p>
-                              <button className="inline-block px-6 py-2.5 bg-sky-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-pink-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
-                                  <a href={items.url}>Read More</a>
-                              </button>
                           </div>
                       </div>
                   ))}
