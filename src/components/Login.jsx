@@ -1,19 +1,26 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import {
+  Checkbox,
+  FormControlLabel,
+  FormGroup,
+  TextField,
+} from "@mui/material";
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
+const styleModal = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor: "background.paper",
+  border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  borderRadius: "5px",
 };
 
 export default function Login() {
@@ -23,20 +30,63 @@ export default function Login() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <Button onClick={handleOpen}>LOGIN</Button>
       <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
+        <Box sx={styleModal}>
+          <Typography
+            id="modal-modal-title"
+            variant="p"
+            component="h5"
+            textAlign="center"
+            sx={{ fontStyle: "italic", mb: 3 }}
+          >
+            SAPASIKOLOG
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          <Typography
+            id="modal-modal-title"
+            variant="p"
+            component="h3"
+            textAlign="center"
+            sx={{ margin: "5px 0" }}
+          >
+            Masuk ke Akun Kamu
           </Typography>
+          <FormGroup>
+            <TextField
+              fullWidth
+              id="outlined-basic"
+              label="Email"
+              variant="outlined"
+              size="small"
+              sx={{ margin: "10px 0" }}
+            />
+            <TextField
+              fullWidth
+              id="outlined-basic"
+              label="Password"
+              variant="outlined"
+              size="small"
+              sx={{ margin: "10px 0" }}
+            />
+
+            <FormControlLabel
+              control={<Checkbox size="small" />}
+              label="ingat saya"
+              sx={{ mb: 2 }}
+            />
+          </FormGroup>
+          <Button fullWidth variant="contained" sx={{ margin: "10px 0" }} size='small'>
+            Masuk
+          </Button>
+          <Typography sx={{textAlign:'center', fontSize:'14px', color:'#aaa'}}>atau</Typography>
+          <Button fullWidth variant="outlined" sx={{ margin: "10px 0" }} size='small'>
+            Masuk dengan Google
+          </Button>
         </Box>
       </Modal>
     </div>
