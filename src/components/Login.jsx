@@ -32,13 +32,25 @@ export default function Login() {
   const handleClose = () => setOpen(false);
 
   const handleLogin = async () => {
+    // *IF API STATUS 200
     try {
       const users = await fetch(
         "https://6350b1d078563c1d82c627f2.mockapi.io/persons"
       ).then((response) => response.json());
 
-      console.log(users);
-      console.log(email, password);
+      const user = users.find((us) => {
+        return us.email === email;
+      });
+
+      if (user === undefined) {
+        throw new Error("User Not Found");
+      }
+      if (password !== user.password) {
+        throw new Error("Email or Password not Correct!");
+      }
+      console.log("login berhasil");
+
+      // *IF API STATUS 404
     } catch (error) {
       alert(error.message);
     }
@@ -90,6 +102,7 @@ export default function Login() {
               label="Password"
               variant="outlined"
               size="small"
+              type="password"
               sx={{ margin: "10px 0" }}
               onChange={function (event) {
                 setPassword(event.target.value);
