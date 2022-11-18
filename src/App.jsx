@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Result from './components/Result'
 import StressTest from './pages/StressTest'
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <div className="App">
-      <StressTest/>
+      {/* <StressTest/> */}
+      <Result/>
     </div>
   )
 }
