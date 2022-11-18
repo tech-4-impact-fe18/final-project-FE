@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import StressTest from './pages/StressTest'
 
 function App() {
