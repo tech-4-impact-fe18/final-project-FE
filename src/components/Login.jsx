@@ -49,6 +49,7 @@ export default function Login() {
         throw new Error("Email or Password not Correct!");
       }
       console.log("login berhasil");
+      setOpen(false);
 
       // *IF API STATUS 404
     } catch (error) {
