@@ -33,7 +33,7 @@ function FormInput() {
         <div className="head">
             <h1 ><i>SapaSikolog</i></h1>
         </div>
-        <h2>Daftarkan Diri Kamu</h2>
+        <h2 style={{marginBottom:'5px'}}>Daftarkan Diri Kamu</h2>
 
         <div classNameName="inputan">
           <div className="form-input">

@@ -9,6 +9,10 @@ main {
     justify-content: center;
     align-items: center;
 }
+.head {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
 .close {
     position: absolute;
     top: 8px;

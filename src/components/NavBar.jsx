@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import "./Nav.css"
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [navbar, setNavbar] = useState(false);
@@ -50,12 +51,12 @@ const NavBar = () => {
                             }`}
                         >
                             <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                        <a
-                            href="/#"
+                        <Link
+                            to={"/login"}
                             className="inline-block w-full px-4 py-2 text-center text-black bg-white rounded-md shadow hover:bg-violet-400"
                         >
                             Login
-                        </a>
+                        </Link>
                         <Link 
                             to={'/register'}
                             className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-cyan-600"
@@ -66,18 +67,18 @@ const NavBar = () => {
                         </div>
                     </div>
                     <div className="hidden space-x-2 md:inline-block">
-                        <a
+                        <Link
                             href="/#"
                             className="px-4 py-2 text-black bg-white rounded-md shadow hover:bg-violet-400"
                         >
                             Login
-                        </a>
-                        <a
-                            href="/#"
+                        </Link>
+                        <Link
+                            to={'/register'}
                             className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-violet-400"
                         >
                             Register
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </nav>
