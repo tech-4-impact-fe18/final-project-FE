@@ -1,12 +1,13 @@
-import { useState } from 'react'
-import Register from './pages/Register'
+import "./App.css"
+import LandingPage from "./pages/Landing/LandingPage"
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <Register />
+      <LandingPage/>
     </div>
   )
 }
