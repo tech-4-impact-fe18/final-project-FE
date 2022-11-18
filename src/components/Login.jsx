@@ -48,7 +48,7 @@ export default function Login() {
       if (password !== user.password) {
         throw new Error("Email or Password not Correct!");
       }
-      console.log("login berhasil");
+      alert('login berhasil');
       setOpen(false);
 
       // *IF API STATUS 404
