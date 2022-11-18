@@ -56,12 +56,12 @@ const NavBar = () => {
                         >
                             Login
                         </a>
-                        <a
-                            href="/#"
+                        <Link 
+                            to={'/register'}
                             className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-cyan-600"
                         >
                             Register
-                        </a>
+                        </Link>
                     </div>
                         </div>
                     </div>
