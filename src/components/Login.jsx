@@ -25,8 +25,24 @@ const styleModal = {
 
 export default function Login() {
   const [open, setOpen] = React.useState(false);
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleLogin = async () => {
+    try {
+      const users = await fetch(
+        "https://6350b1d078563c1d82c627f2.mockapi.io/persons"
+      ).then((response) => response.json());
+
+      console.log(users);
+      console.log(email, password);
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   return (
     <div>
@@ -64,6 +80,9 @@ export default function Login() {
               variant="outlined"
               size="small"
               sx={{ margin: "10px 0" }}
+              onChange={function (event) {
+                setEmail(event.target.value);
+              }}
             />
             <TextField
               fullWidth
@@ -72,6 +91,9 @@ export default function Login() {
               variant="outlined"
               size="small"
               sx={{ margin: "10px 0" }}
+              onChange={function (event) {
+                setPassword(event.target.value);
+              }}
             />
 
             <FormControlLabel
@@ -80,11 +102,26 @@ export default function Login() {
               sx={{ mb: 2 }}
             />
           </FormGroup>
-          <Button fullWidth variant="contained" sx={{ margin: "10px 0" }} size='small'>
+          <Button
+            fullWidth
+            variant="contained"
+            sx={{ margin: "10px 0" }}
+            size="small"
+            onClick={handleLogin}
+          >
             Masuk
           </Button>
-          <Typography sx={{textAlign:'center', fontSize:'14px', color:'#aaa'}}>atau</Typography>
-          <Button fullWidth variant="outlined" sx={{ margin: "10px 0" }} size='small'>
+          <Typography
+            sx={{ textAlign: "center", fontSize: "14px", color: "#aaa" }}
+          >
+            atau
+          </Typography>
+          <Button
+            fullWidth
+            variant="outlined"
+            sx={{ margin: "10px 0" }}
+            size="small"
+          >
             Masuk dengan Google
           </Button>
         </Box>
