@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ResultBerat from './components/ResultBerat'
 import ResultRingan from './components/ResultRingan'
 import ResultSedang from './components/ResultSedang'
@@ -9,10 +10,14 @@ function App() {
 
   return (
     <div className="App">
-      {/* <StressTest/> */}
-      <ResultRingan/>
-      <ResultSedang/>
-      <ResultBerat/>
+      <StressTest/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/result1' element={<ResultRingan/>} />
+          <Route path='/result2' element={<ResultSedang/>} />
+          <Route path='/result3' element={<ResultBerat/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
