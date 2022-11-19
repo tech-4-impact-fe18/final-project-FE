@@ -48,14 +48,21 @@ export default function Login() {
       if (password !== user.password) {
         throw new Error("Email or Password not Correct!");
       }
-      alert('login berhasil');
-      setOpen(false);
+
+      // Todo: IF LOGIN SUCCESS
+      localStorage.setItem('name', user.name)
+      return loginSuccess(user.name)
 
       // *IF API STATUS 404
     } catch (error) {
       alert(error.message);
     }
   };
+
+  const loginSuccess = (username) => {
+      alert(`Selamat datang ${username}`)
+      return setOpen(false);
+  }
 
   return (
     <div>

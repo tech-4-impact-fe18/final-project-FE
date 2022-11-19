@@ -1,15 +1,13 @@
-import "./App.css"
-import LandingPage from "./pages/Landing/LandingPage"
-
-
-
+import "./App.css";
+import Login from "./components/Login";
+import LandingPage from "./pages/Landing/LandingPage";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
+      <LandingPage />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
