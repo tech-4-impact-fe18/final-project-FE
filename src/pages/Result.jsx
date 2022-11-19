@@ -2,6 +2,7 @@ import React from 'react'
 import './Result.css'
 import picture from '../assets/result.png'
 import ResultCategory from '../components/ResultCategory'
+import { useSelector } from 'react-redux'
 
 const Result = () => {
   const kategori = [
@@ -28,16 +29,17 @@ const Result = () => {
     }
   ]
 
-  function result() {
-    
-    if(hasil <=7) {
-        
-    }else if(hasil <=15){
-        
+  const {skor} = useSelector(state => state)
+
+  function hasil() {
+    if(skor <= 16) {
+      console.log("a")
+    }else if(skor <= 32){
+      console.log("b")
     }else {
-        
+      console.log("c")
     }
-}
+  }
 
   return (
     <div className='card-result'>
