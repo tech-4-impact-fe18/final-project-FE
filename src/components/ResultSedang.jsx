@@ -2,7 +2,7 @@ import React from 'react'
 import './Result.css'
 import picture from '../assets/result.png'
 
-const Result = () => {
+const ResultSedang = () => {
   return (
     <div className='card-result'>
         <div className="mt-20">
@@ -11,10 +11,9 @@ const Result = () => {
           <h1 className="text-2xl font-black text-violet-400 text-center mt-3 mb-5 shadow-sm">Sapasikolog.com</h1>
             <div className="p-6">
                 <img src={picture} alt="Image Not Found"/>
-              <h3 className="text-gray-900 text-2xl font-extrabold mb-10">Hasil Tes Kamu : Ringan</h3>
+              <h3 className="text-gray-900 text-2xl font-extrabold mb-10">Hasil Tes Kamu : Sedang</h3>
               <p className="text-black-700 text-base mb-2">
-              Hasil tes kamu menunjukkan persepsi tingkat stres yang <b>Ringan</b> Saat ini kamu cenderung merasa tidak nyaman dengan kehidupanmu.
-              </p>
+              Hasil tes kamu menunjukkan persepsi tingkat stres yang <b>Sedang</b>. Saat ini kamu cenderung merasa tidak nyaman dengan kehidupanmu.</p>
               <p>Mungkin kamu merasa ada hal-hal tidak terduga yang terjadi dalam hidupmu. Kamu juga mungkin mengalami kesulitan untuk mengatasi masalah-masalah yang sedang dihadapi.</p>
               <div className="text-center mt-10">
               <button
@@ -32,4 +31,4 @@ const Result = () => {
   )
 }
 
-export default Result
+export default ResultSedang

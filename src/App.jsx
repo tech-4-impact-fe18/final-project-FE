@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import Result from './components/Result'
+import ResultBerat from './components/ResultBerat'
+import ResultRingan from './components/ResultRingan'
+import ResultSedang from './components/ResultSedang'
 import StressTest from './pages/StressTest'
 
 function App() {
@@ -8,7 +10,9 @@ function App() {
   return (
     <div className="App">
       {/* <StressTest/> */}
-      <Result/>
+      <ResultRingan/>
+      <ResultSedang/>
+      <ResultBerat/>
     </div>
   )
 }
