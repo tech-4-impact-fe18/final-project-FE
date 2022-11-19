@@ -57,10 +57,10 @@ function Soal() {
   }
 
   return (
-    <div className="card m-5 p-5 border-0" style={{margin : '3rem'}}>
-        <h2 className="card-header border-0 pb-5 pt-1" style={{backgroundColor: 'white'}}><i>SapaSikolog.com</i></h2>
-        <h5 className="card-title mb-5 mt-1">{soal[index]}</h5>
-              <div className="jawaban hover:bg-blue mt-10">
+    <div className="" style={{margin : '3rem'}}>
+        <h2 className="italic font-bold text-2xl " style={{backgroundColor: 'white'}}>SapaSikolog.com</h2>
+        <h5 className="text-xl">{soal[index]}</h5>
+              <div className="jawaban mt-10">
                   <button id="1" onClick={Increment_1}>Tidak Pernah</button>
                   <button id="2" onClick={Increment_2}>Jarang</button>
                   <button id="3" onClick={Increment_3}>Kadang-kadang</button>
@@ -70,8 +70,8 @@ function Soal() {
               </div>
         <div className="tombol">
               {changeButton ? 
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={hasil}>Selesai</button> : 
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleClick}>Selanjutnya</button>}
+              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl" onClick="">Selesai</button> : 
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleClick}>Selanjutnya</button>}
         </div>
     </div>
   )
