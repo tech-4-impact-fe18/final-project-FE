@@ -74,9 +74,11 @@ export default function Login() {
           backgroundColor: "white",
           fontWeight: 500,
           color: "black",
+          padding:'6px 20px',
+          fontSize:'16px'
         }}
       >
-        LOGIN
+        MASUK
       </Button>
       <Modal
         open={open}
@@ -99,7 +101,7 @@ export default function Login() {
             variant="p"
             component="h3"
             textAlign="center"
-            sx={{ margin: "5px 0" }}
+            sx={{ margin: "5px 0", fontWeight:600 }}
           >
             Masuk ke Akun Kamu
           </Typography>
@@ -138,7 +140,6 @@ export default function Login() {
             fullWidth
             variant="contained"
             sx={{ margin: "10px 0" }}
-            size="small"
             onClick={handleLogin}
           >
             Masuk
@@ -152,7 +153,6 @@ export default function Login() {
             fullWidth
             variant="outlined"
             sx={{ margin: "10px 0" }}
-            size="small"
           >
             Masuk dengan Google
           </Button>

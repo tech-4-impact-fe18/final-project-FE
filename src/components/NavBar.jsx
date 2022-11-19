@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import Login from "./Login";
+import { Box } from "@mui/material";
 
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -61,19 +62,21 @@ const NavBar = () => {
                 to={"/register"}
                 className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-cyan-600"
               >
-                Register
+                DAFTAR
               </Link>
             </div>
           </div>
         </div>
-        <div className="hidden space-x-2 md:inline-block" >
-          <Login />
-          <Link
-            to={"/register"}
-            className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-violet-400"
-          >
-            Register
-          </Link>
+        <div className="hidden space-x-2 md:inline-block">
+          <Box sx={{display: 'flex', gap:'10px', alignItems:'center'}}>
+            <Login />
+            <Link
+              to={"/register"}
+              className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-violet-400"
+            >
+              DAFTAR
+            </Link>
+          </Box>
         </div>
       </div>
     </nav>
