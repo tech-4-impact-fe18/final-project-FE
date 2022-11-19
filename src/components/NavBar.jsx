@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import Login from "./Login";
 import "./Nav.css";
+import { Link } from "react-router-dom";
+import Login from "./Login";
 
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -55,33 +56,24 @@ const NavBar = () => {
             }`}
           >
             <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-              <a
-                className="inline-block w-full px-4 py-2 text-center text-black bg-white rounded-md shadow hover:bg-violet-400"
-              >
-                {<Login />}
-              </a>
-              <a
-                href="/#"
+              <Login />
+              <Link
+                to={"/register"}
                 className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-cyan-600"
               >
                 Register
-              </a>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="hidden space-x-2 md:inline-block">
-          <a
-            href="/#"
-            className="px-4 py-2 text-black bg-white rounded-md shadow hover:bg-violet-400"
-          >
-            Login
-          </a>
-          <a
-            href="/#"
+        <div className="hidden space-x-2 md:inline-block" >
+          <Login />
+          <Link
+            to={"/register"}
             className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-violet-400"
           >
             Register
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

@@ -9,6 +9,7 @@ import {
   FormGroup,
   TextField,
 } from "@mui/material";
+import "./Nav.css";
 
 const styleModal = {
   position: "absolute",
@@ -50,8 +51,8 @@ export default function Login() {
       }
 
       // Todo: IF LOGIN SUCCESS
-      localStorage.setItem('name', user.name)
-      return loginSuccess(user.name)
+      localStorage.setItem("name", user.name);
+      return loginSuccess(user.name);
 
       // *IF API STATUS 404
     } catch (error) {
@@ -60,13 +61,23 @@ export default function Login() {
   };
 
   const loginSuccess = (username) => {
-      alert(`Selamat datang ${username}`)
-      return setOpen(false);
-  }
+    alert(`Selamat datang ${username}`);
+    return setOpen(false);
+  };
 
   return (
     <div>
-      <Button onClick={handleOpen}>LOGIN</Button>
+      <Button
+        fullWidth
+        onClick={handleOpen}
+        sx={{
+          backgroundColor: "white",
+          fontWeight: 500,
+          color: "black",
+        }}
+      >
+        LOGIN
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
