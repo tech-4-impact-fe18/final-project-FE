@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import "../pages/Result.css"
 
 const soal = [
    "Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa Kamu tidak dapat mengendalikan hal-hal yang penting dalam hidup Kamu?",
@@ -13,20 +14,22 @@ const soal = [
    "Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa segala sesuatu berjalan sesuai keinginan Kamu?"
   ]
 function Soal() {
-
+  const [changeButton, setChangeButton] = useState(false)
   const [index, setIndex] = useState(0)
 
   const handleClick = () => {
     setIndex(index + 1)
-    console.log('coba index')
+    if (index == soal.length -2) {
+      setChangeButton(true)
+    }
   }
 
   return (
     <div className="card m-5 p-5 border-0" style={{margin : '3rem'}}>
         <h2 className="card-header border-0 pb-5 pt-1" style={{backgroundColor: 'white'}}><i>SapaSikolog.com</i></h2>
         {/* <h5 className="card-title mb-5 mt-1">Dalam satu minggu terakhir, seberapa sering Kamu merasa kesal karena sesuatu yang terjadi secara tidak terduga?</h5> */}
-        <h5>{index}</h5>
-              <div className="jawaban">
+        <h5>{soal[index]}</h5>
+              <div className="jawaban hover:bg-blue mt-10">
                   <button id="1">Tidak Pernah</button>
                   <button id="2">Jarang</button>
                   <button id="3">Kadang-kadang</button>
@@ -34,8 +37,9 @@ function Soal() {
                   <button id="5">Sering</button>
               </div>
         <div className="tombol">
-              <button onClick={handleClick}>Selanjutnya</button>
-              <button id="selesai" className="selesai" onClick="result()">Selesai</button>
+              {changeButton ? 
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick="result() ">Selesai</button> : 
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={handleClick}>Selanjutnya</button>}
         </div>
     </div>
   )

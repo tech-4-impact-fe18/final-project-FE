@@ -4,6 +4,41 @@ import picture from '../assets/result.png'
 import ResultCategory from '../components/ResultCategory'
 
 const Result = () => {
+  const kategori = [
+    {
+      testResult : "Berat",
+      deskripsi : <>
+                    Hasil tes kamu menunjukkan kamu memiliki persepsi tingkat stres yang <b>Berat</b>. Saat ini kamu cenderung merasa memiliki banyak beban dalam hidupmu.<br/>
+                    Mungkin kamu merasa tidak berdaya untuk menyelesaikan berbagai permasalahan yang kamu alami. Banyak hal tidak terduga yang terjadi dan kamu mulai merasa kehilangan kontrol atas hidupmu
+                  </>
+    },
+    {
+      testResult : "Ringan",
+      deskripsi : <>
+                    Hasil tes kamu menunjukkan persepsi tingkat stres yang <b>Ringan</b> Saat ini kamu cenderung merasa tidak nyaman dengan kehidupanmu. <br />
+                    Mungkin kamu merasa ada hal-hal tidak terduga yang terjadi dalam hidupmu. Kamu juga mungkin mengalami kesulitan untuk mengatasi masalah-masalah yang sedang dihadapi.
+                  </>
+  },
+    {
+      testResult : "Sedang",
+      deskripsi : <>
+                  Hasil tes kamu menunjukkan persepsi tingkat stres yang <b>Sedang</b>. Saat ini kamu cenderung merasa tidak nyaman dengan kehidupanmu.<br/>
+                  Mungkin kamu merasa ada hal-hal tidak terduga yang terjadi dalam hidupmu. Kamu juga mungkin mengalami kesulitan untuk mengatasi masalah-masalah yang sedang dihadapi.
+      </>
+    }
+  ]
+
+  function result() {
+    
+    if(hasil <=7) {
+        
+    }else if(hasil <=15){
+        
+    }else {
+        
+    }
+}
+
   return (
     <div className='card-result'>
         <div className="mt-20">

@@ -1,6 +1,6 @@
 import { createStore } from 'redux'
-import keranjangReducer from '../reducer/keranjangReducer'
+import SkorReducer from '../reducer/SkorReducer';
 
-const store = createStore(skor)
+const store = createStore(SkorReducer)
 
 export default store;
