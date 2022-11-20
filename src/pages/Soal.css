@@ -20,8 +20,9 @@ h2 {
 }
 .jawaban button {
     border: 1px solid rgb(153, 153, 153);
-    background-color: #1B97CC;
-    color: white;
+    font-weight: bold;
+    background-color: #fff;
+    color: black;
     padding: 5px 0;
     cursor: pointer;
     border-radius: 20px;
@@ -30,7 +31,7 @@ h2 {
 }
 
 .jawaban button:focus{
-    background-color:blue;
+    background-color:rgb(96, 96, 221);
 }
 .tombol {
     display: flex;

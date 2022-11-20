@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import "../pages/Result.css"
 import picture from '../assets/result.png'
+import {Link} from 'react-router-dom'
 // import ResultCategory from './ResultCategory'
 import {
   increment_1,
@@ -69,9 +70,9 @@ function Soal() {
   return (
     <>
       {changeDisplay ? <div className="" style={{margin : '3rem'}}>
-        <h2 className="italic font-bold text-2xl " style={{backgroundColor: 'white'}}>SapaSikolog.com</h2>
+        <h2 className="italic font-bold text-2xl text-white ">SapaSikolog.com</h2>
         <h5 className="text-xl">{soal[index]}</h5>
-              <div className="jawaban mt-10">
+              <div className="jawaban mt-10 font white">
                   <button id="1" onClick={Increment_1}>Tidak Pernah</button>
                   <button id="2" onClick={Increment_2}>Jarang</button>
                   <button id="3" onClick={Increment_3}>Kadang-kadang</button>
@@ -81,7 +82,7 @@ function Soal() {
         <div className="tombol">
               {changeButton ? 
               <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleDisplay}>Selesai</button> : 
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleClick}>Selanjutnya</button>}
+              <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleClick}>Selanjutnya</button>}
         </div>
     </div>
     : 
@@ -99,7 +100,7 @@ function Soal() {
                       type="button"
                       className="inline-block px-6 py-2.5 bg-violet-200 text-black font-medium text-s leading-tight uppercase rounded shadow-md hover:bg-violet-400 hover:shadow-lg text-white focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                     >
-                      HOME
+                      <Link to={"/"}> HOME</Link>
                     </button>
                 </div>
             </div>

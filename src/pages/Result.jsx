@@ -3,6 +3,7 @@ import './Result.css'
 import picture from '../assets/result.png'
 import ResultCategory from '../components/ResultCategory'
 import { useSelector } from 'react-redux'
+import {Link} from 'react-router-domnpm'
 
 const Result = () => {
   const kategori = [
@@ -61,7 +62,7 @@ const Result = () => {
                 type="button"
                 className="inline-block px-6 py-2.5 bg-violet-200 text-black font-medium text-s leading-tight uppercase rounded shadow-md hover:bg-violet-400 hover:shadow-lg text-white focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
               >
-                Kembali
+                <Link to={"/"}>Kembali</Link>
               </button>
               </div>
             </div>
