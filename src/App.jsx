@@ -1,10 +1,10 @@
-import "./App.css";
 import LandingPage from "./pages/Landing/LandingPage";
 import Register from "./pages/Register";
 import { Routes, Route } from "react-router-dom";
 import StressTest from "./pages/StressTest"
 
 function App() {
+
   return (
     <div className="App">
       <Routes>
@@ -13,7 +13,7 @@ function App() {
         <Route path="/stresstest" element={<StressTest />} />
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
