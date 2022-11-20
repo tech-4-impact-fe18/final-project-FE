@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import "../pages/Result.css"
+import picture from '../assets/result.png'
+// import ResultCategory from './ResultCategory'
 import {
   increment_1,
   increment_2,
@@ -8,6 +10,7 @@ import {
   increment_4,
   increment_5,
 } from "../redux/reducer/SkorReducer"
+import ResultCategory from './ResultCategory'
 
 const soal = [
    "1. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa Kamu tidak dapat mengendalikan hal-hal yang penting dalam hidup Kamu?",
@@ -21,9 +24,11 @@ const soal = [
    "9. Dalam satu minggu terakhir, seberapa sering Kamu merasa marah karena hal-hal yang terjadi di luar kendali Kamu?",
    "10. Dalam satu minggu terakhir, seberapa sering Kamu merasa bahwa segala sesuatu berjalan sesuai keinginan Kamu?"
   ]
+
 function Soal() {
   const [changeButton, setChangeButton] = useState(false)
   const [index, setIndex] = useState(0)
+  const [changeDisplay, setDisplay] = useState(true)
 
   const handleClick = () => {
     setIndex(index + 1)
@@ -31,6 +36,11 @@ function Soal() {
       setChangeButton(true)
     }
   }
+
+  const handleDisplay = () =>{
+    setDisplay(false)
+  }
+
 
   const dispatch = useDispatch()
   const [skor, setSkor] = useState(0)
@@ -57,7 +67,8 @@ function Soal() {
   }
 
   return (
-    <div className="" style={{margin : '3rem'}}>
+    <>
+      {changeDisplay ? <div className="" style={{margin : '3rem'}}>
         <h2 className="italic font-bold text-2xl " style={{backgroundColor: 'white'}}>SapaSikolog.com</h2>
         <h5 className="text-xl">{soal[index]}</h5>
               <div className="jawaban mt-10">
@@ -66,14 +77,38 @@ function Soal() {
                   <button id="3" onClick={Increment_3}>Kadang-kadang</button>
                   <button id="4" onClick={Increment_4}>Cukup Sering</button>
                   <button id="5" onClick={Increment_5}>Sering</button>
-                  <span>{skor}</span>
               </div>
         <div className="tombol">
               {changeButton ? 
-              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl" onClick="">Selesai</button> : 
+              <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleDisplay}>Selesai</button> : 
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl" onClick={handleClick}>Selanjutnya</button>}
         </div>
     </div>
+    : 
+    <div className='card-result'>
+      <div className="mt-10">
+        <div className="flex justify-center ">
+          <div className="rounded-lg shadow-lg bg-white max-w-md shadow-md">
+            <h1 className="text-2xl font-black text-violet-400 text-center mt-3 mb-5 shadow-sm">Sapasikolog.com</h1>
+              <div className="p-6">
+                  <img src={picture} alt="Image Not Found"/>
+                  <h3 className="text-center text-gray-900 text-2xl font-extrabold mb-10">SKOR TES ANDA : {skor}</h3>
+                  <p className="text-black-700 text-center mb-2">Informasi selengkapnya ada pada card dibawah ini</p>
+                  <div className="text-center mt-10">
+                    <button
+                      type="button"
+                      className="inline-block px-6 py-2.5 bg-violet-200 text-black font-medium text-s leading-tight uppercase rounded shadow-md hover:bg-violet-400 hover:shadow-lg text-white focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    >
+                      HOME
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ResultCategory/>
+    </div>}
+    </>
   )
 }
 
