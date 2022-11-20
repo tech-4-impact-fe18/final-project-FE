@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import LandingPage from '../pages/Landing/LandingPage';
 import Login from "./Login";
 
 function FormInput() {
@@ -8,6 +9,7 @@ function FormInput() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ function FormInput() {
         setEmail("");
         setPassword("");
         alert("Selamat, Anda Berhasil Registrasi");
+        navigate("/")
       })
       .catch((err) => {
         alert("Form Harus Diisi dengan Benar!");
