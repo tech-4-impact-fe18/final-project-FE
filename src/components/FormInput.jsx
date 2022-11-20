@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 function FormInput() {
 
@@ -29,7 +30,9 @@ function FormInput() {
   return (
     <main>
       <form className="container" onSubmit={handleSubmit}>
-        <div className="close" style={{textDecoration:'none'}}>X</div>
+        <div className="close" style={{textDecoration:'none'}}>
+          <Link path={"/"}>X</Link>
+        </div>
         <div className="head">
             <h1 ><i>SapaSikolog</i></h1>
         </div>
