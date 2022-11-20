@@ -36,7 +36,7 @@ export default function Login() {
     // *IF API STATUS 200
     try {
       const users = await fetch(
-        "https://6350b1d078563c1d82c627f2.mockapi.io/persons"
+        "https://634f638adf22c2af7b502de8.mockapi.io/users"
       ).then((response) => response.json());
 
       const user = users.find((us) => {
