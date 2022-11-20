@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar";
 import CardArt from "./CardArt";
 import logo from "./Health.png";
 import "./card.css"
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
@@ -28,7 +29,7 @@ const LandingPage = () => {
                 type="button"
                 className=" inline-block px-6 py-2.5 bg-violet-200 text-black font-medium text-s leading-tight uppercase rounded shadow-md hover:bg-violet-400 hover:shadow-lg text-white focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
               >
-                Test
+                <Link to={"/stresstest"}>Test</Link>
               </button>
             </div>
           </div>
