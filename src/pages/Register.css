@@ -11,7 +11,7 @@ main {
 }
 .head {
     font-size: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 1px;
 }
 .close {
     position: absolute;
@@ -22,14 +22,17 @@ main {
 }
 .container {
     position: relative;
-    width: 450px;
-    height: 530px;
+    width: 200px;
+    height: 650px;
     border-color:#1B97CC ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 6vh;
+    margin-bottom: 3vh;
+    margin-left: 6vh;
+    margin-right: 6vh;
     background-color: white;
 }
 .cek {

@@ -30,13 +30,13 @@ function FormInput() {
 
   return (
     <main>
-      <form className="container" onSubmit={handleSubmit}>
+      <form className="container" style={{width: "450px"}} onSubmit={handleSubmit}>
         <div className="close" style={{ textDecoration: "none" }}>
           <Link to={"/"}>X</Link>
         </div>
         <div className="head">
-          <h1>
-            <i>SapaSikolog</i>
+          <h1 style={{color : "#1B97CC", fontWeight : "bolder"}}>
+            <i>SapaSikolog.com</i>
           </h1>
         </div>
         <h2 style={{ marginBottom: "5px" }}>Daftarkan Diri Kamu</h2>
